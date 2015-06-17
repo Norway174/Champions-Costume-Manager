@@ -6,7 +6,7 @@
         Return Debug_folder
     End Function
 
-    Sub Form1_Load() Handles MyBase.Load, ReloadToolStripMenuItem.Click
+    Sub loadCostumes() Handles MyBase.Load, ReloadToolStripMenuItem.Click
         Status_SelCount.Text = ""
 
         ImageList1.Images.Clear()
@@ -59,7 +59,7 @@
 
             My.Computer.FileSystem.DeleteFile(cost.Tag)
         Next
-        Form1_Load()
+        loadCostumes()
     End Sub
 
     Private Sub UpladToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpladToolStripMenuItem.Click

@@ -10,3 +10,4 @@ D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manag
 D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Debug\Champions_Costume_Manager.import.resources
 D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Debug\Champions_Costume_Manager.Export.resources
 D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Debug\Champions_Costume_Manager.Image2String2Image.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Debug\Champions_Costume_Manager.Startup.resources

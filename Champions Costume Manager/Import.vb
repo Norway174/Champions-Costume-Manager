@@ -87,7 +87,7 @@ Public Class import
             My.Computer.FileSystem.MoveFile(TmpLoc, SaveAs, True)
         End If
 
-        Form1.Form1_Load()
+        Form1.loadCostumes()
         Me.Close()
     End Sub
 
