@@ -11,6 +11,6 @@ A simple to use, yet powerfull Costume Manager for the MMORPG game, Champions On
 
 ## What doesn't work / TODO list:
 - Detecting CO folder. Uses a static folder right now. You have to change it yourself, and then compile in order to use it.
-- Renaming costumes. This also including renaming the handle, so you can actually use your friends costumes. N(Needs testing.)
+- Renaming costumes. This also including renaming the handle, so you can actually use your friends costumes. (Needs testing.)
 - Disable costumes without deleting them.
 - More??
