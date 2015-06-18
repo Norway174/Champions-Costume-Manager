@@ -107,7 +107,7 @@ Partial Class CODetector
         'FolderBrowserDialog1
         '
         Me.FolderBrowserDialog1.Description = "Manually add your CO costumes folder..."
-        Me.FolderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.ProgramFilesX86
+        Me.FolderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer
         '
         'Button5
         '

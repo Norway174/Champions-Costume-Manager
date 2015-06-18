@@ -31,6 +31,8 @@ Partial Class import
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,20 +75,20 @@ Partial Class import
         'Button2
         '
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(12, 388)
+        Me.Button2.Location = New System.Drawing.Point(93, 388)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(100, 23)
         Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Done"
+        Me.Button2.Text = "Import && Close"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(118, 388)
+        Me.Button3.Location = New System.Drawing.Point(12, 388)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Cancel"
+        Me.Button3.Text = "Close"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'TextBox2
@@ -116,12 +118,26 @@ Partial Class import
         Me.Label2.Text = "Preview"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(93, 359)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(100, 23)
+        Me.Button4.TabIndex = 10
+        Me.Button4.Text = "Save as..."
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'SaveFileDialog1
+        '
+        Me.SaveFileDialog1.Filter = "JPEG|*.jpg"
+        '
         'import
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(509, 423)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.TextBox2)
@@ -150,4 +166,6 @@ Partial Class import
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
 End Class

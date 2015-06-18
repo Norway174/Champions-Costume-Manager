@@ -1,6 +1,6 @@
 ﻿Public Class Form1
 
-    Dim costumeFolder As String = "D:\SteamLibrary\SteamApps\common\Champions Online\Champions Online\Live\screenshots"
+    Dim costumeFolder As String '= "D:\SteamLibrary\SteamApps\common\Champions Online\Champions Online\Live\screenshots"
     Public SettingsFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\CCM" 'My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData.Replace("\" & My.Application.Info.Version.ToString, "")
     Public SettingsFile As String = SettingsFolder & "\CCM-Settings.cfg"
     Public InstancesFile As String = SettingsFolder & "\CCM-Instances.cfg"
@@ -18,6 +18,8 @@
 
         loadInstances()
         loadCostumes()
+        
+
     End Sub
 
     Sub loadInstances()
@@ -50,6 +52,13 @@
         ListView1.Items.Clear()
         Dim CostumesCount As Integer = 0
 
+        If My.Computer.FileSystem.DirectoryExists(costumeFolder) = False Then
+            Status_CosCount.Text = "No costume folders configured."
+            UpladToolStripMenuItem.Enabled = False
+            DeleteToolStripMenuItem.Enabled = False
+            Exit Sub
+        End If
+
         For Each img In My.Computer.FileSystem.GetFiles(costumeFolder)
             If FileIO.FileSystem.GetName(img).StartsWith("Costume") And FileIO.FileSystem.GetName(img).EndsWith(".jpg") Then
                 ImageList1.Images.Add(Drawing.Image.FromFile(img))
@@ -60,7 +69,15 @@
                 Status_CosCount.Text = "Costumes: " & CostumesCount.ToString
             End If
         Next
-        If CostumesCount = 0 Then Status_CosCount.Text = "Coulden't find any costumes. "
+        If CostumesCount = 0 Then
+            Status_CosCount.Text = "Coulden't find any costumes."
+            UpladToolStripMenuItem.Enabled = False
+            DeleteToolStripMenuItem.Enabled = False
+        Else
+            UpladToolStripMenuItem.Enabled = True
+            DeleteToolStripMenuItem.Enabled = True
+        End If
+
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged

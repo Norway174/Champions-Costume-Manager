@@ -31,31 +31,44 @@ Public Class import
         'TextBox2.Text = e.Result
         'DownloadedCostume = e.Result
 
+        'If e.Error.Message = Nothing Then
+        '    MsgBox(e.Error.Message, MsgBoxStyle.Exclamation, "An Error as occured!")
+        '    Button1.Enabled = True
+        '    Button1.Text = "Download"
+        '    Exit Sub
+        'End If
+
         If e.Result.Contains("Spam Detection") Then
             If MsgBox("Spam... Please go to the Paste, and enter the Captcha in order to unlock it." & vbNewLine & _
                       "Go to Paste to enter the Captcha now?" & vbNewLine & vbNewLine & _
                       "After you've entered the Captcha, and can see the paste. Feel free to close it, try again here.", MsgBoxStyle.YesNo, "Spam Filter") = MsgBoxResult.Yes Then
                 Process.Start("http://pastebin.com/" & TextBox1.Text)
             End If
-
+            'ElseIf e.Result.Contains("404") Then
+            '    MsgBox(e.Error.Message, MsgBoxStyle.Exclamation, "An Error as occured!")
+            '    Button1.Enabled = True
+            '    Button1.Text = "Download"
+            '    Exit Sub
         Else
             Dim Split As String() = e.Result.Split(vbNewLine)
-            
+
             Dim RawImg As Byte() = Convert.FromBase64String(Split(Split.Count() - 1))
             Console.WriteLine(TmpLoc)
 
             If My.Computer.FileSystem.DirectoryExists(TmpLoc) = False Then My.Computer.FileSystem.CreateDirectory(TmpFol)
             My.Computer.FileSystem.WriteAllBytes(TmpLoc, RawImg, False)
 
+            Label2.Visible = False
             PictureBox1.ImageLocation = TmpLoc
 
             DownloadedCostumeName = Split(Split.Count() - 2)
             DownloadedCostumeName = DownloadedCostumeName.TrimStart(vbLf)
 
-            Button2.Enabled = True
+            If My.Computer.FileSystem.DirectoryExists(Form1.COFolder) Then
+                Button2.Enabled = True
+            End If
+
         End If
-
-
 
         Button1.Text = "Download"
         Button1.Enabled = True
@@ -65,6 +78,7 @@ Public Class import
         TextBox1.Clear()
         TextBox2.Clear()
         PictureBox1.Image = Nothing
+        Label2.Visible = True
         ProgressBar1.Value = 0
         Button2.Enabled = False
 
@@ -88,10 +102,21 @@ Public Class import
         End If
 
         Form1.loadCostumes()
+        If My.Computer.FileSystem.DirectoryExists(TmpFol) Then My.Computer.FileSystem.DeleteDirectory(TmpFol, FileIO.DeleteDirectoryOption.DeleteAllContents)
         Me.Close()
     End Sub
 
     Private Sub Cancel(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        If My.Computer.FileSystem.DirectoryExists(TmpFol) Then My.Computer.FileSystem.DeleteDirectory(TmpFol, FileIO.DeleteDirectoryOption.DeleteAllContents)
         Me.Close()
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        SaveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+        SaveFileDialog1.FileName = DownloadedCostumeName
+        SaveFileDialog1.ShowDialog()
+
+        If SaveFileDialog1.FileName = Nothing Then Exit Sub
+        My.Computer.FileSystem.CopyFile(TmpLoc, SaveFileDialog1.FileName, True)
     End Sub
 End Class

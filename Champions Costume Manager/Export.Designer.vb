@@ -291,6 +291,7 @@ Partial Class Export
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Preview"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label6.Visible = False
         '
         'Export
         '
