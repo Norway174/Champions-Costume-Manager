@@ -1,7 +1,7 @@
 ﻿Public Class Startup
     Dim First As Boolean = False
 
-    Private Sub Startup_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Startup_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
         If First = True Then Exit Sub
         Application.DoEvents()
         'System.Threading.Thread.Sleep(50)
@@ -33,8 +33,8 @@
         Dim result As String
 
         Try
-            'result = webClient.DownloadString(ReleasesURL)
-            result = My.Resources.APIJsonExample
+            result = webClient.DownloadString(ReleasesURL)
+            'result = My.Resources.APIJsonExample
         Catch ex As Exception
             Log("Failed to get updates.")
             Console.WriteLine(ex.Message)
@@ -46,7 +46,7 @@
         If result.Contains(tagname) Then
             'version = result.Substring(result.IndexOf(tagname) + tagname.Count + 4, result.IndexOf("""," & vbNewLine))
 
-            Dim Split As String() = result.Split(vbNewLine)
+            Dim Split As String() = result.Split(",")
             For Each lne As String In Split
                 If lne.Contains(tagname) Then
                     Dim lneSplit As String() = lne.Split("""")
@@ -76,10 +76,11 @@
     End Sub
 
     Sub CheckSettings()
-        If My.Computer.FileSystem.FileExists(Form1.SettingsFile) = False Then
+        If My.Computer.FileSystem.DirectoryExists(Form1.SettingsFolder) = False Then
             If MsgBox("No settings file found, do you want to create one now? It will be saved in: " & vbNewLine & Form1.SettingsFolder, MsgBoxStyle.YesNo, "Where to save stuff?") = MsgBoxResult.Yes Then
                 My.Computer.FileSystem.CreateDirectory(Form1.SettingsFolder)
 
+                CODetector.ShowDialog()
             End If
         End If
     End Sub

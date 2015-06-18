@@ -1,0 +1,15 @@
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\bin\Release\Champions Costume Manager.exe
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\bin\Release\Champions Costume Manager.pdb
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\bin\Release\Champions Costume Manager.xml
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.AutoUpdater.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.CODetector.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.Export.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.Form1.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.Image2String2Image.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.import.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.Resources.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions_Costume_Manager.Startup.resources
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions Costume Manager.vbproj.GenerateResource.Cache
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions Costume Manager.exe
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions Costume Manager.xml
+D:\Visual Studio 2010\Projects\Champions Costume Manager\Champions Costume Manager\obj\x86\Release\Champions Costume Manager.pdb

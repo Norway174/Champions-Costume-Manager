@@ -1,11 +1,12 @@
 ﻿Public Class Form1
 
-    Dim Debug_folder As String = "D:\SteamLibrary\SteamApps\common\Champions Online\Champions Online\Live\screenshots"
-    Public SettingsFolder As String = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData.Replace("\" & My.Application.Info.Version.ToString, "")
+    Dim costumeFolder As String = "D:\SteamLibrary\SteamApps\common\Champions Online\Champions Online\Live\screenshots"
+    Public SettingsFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\CCM" 'My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData.Replace("\" & My.Application.Info.Version.ToString, "")
     Public SettingsFile As String = SettingsFolder & "\CCM-Settings.cfg"
+    Public InstancesFile As String = SettingsFolder & "\CCM-Instances.cfg"
 
     Function COFolder() As String
-        Return Debug_folder
+        Return costumeFolder
     End Function
 
     Sub StartupProcedure() Handles MyBase.Load
@@ -14,7 +15,32 @@
 
         Console.WriteLine(SettingsFolder)
 
+
+        loadInstances()
         loadCostumes()
+    End Sub
+
+    Sub loadInstances()
+
+        If My.Computer.FileSystem.FileExists(InstancesFile) Then
+            Dim Instances As String() = My.Computer.FileSystem.ReadAllText(InstancesFile).Split(vbNewLine)
+            costumeFolder = Instances(0)
+
+            'If Instances.Count > 1 Then
+            For Each Int As String In Instances
+                'TODO: Add the rest of the instances to a list and let the user switch between them.
+                ToolStripComboBox2.Items.Add(Int)
+            Next
+            ToolStripComboBox2.SelectedIndex = 0
+            'End If
+
+
+
+        End If
+
+    End Sub
+    Private Sub editInstances(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton2.Click
+        CODetector.ShowDialog()
     End Sub
 
     Sub loadCostumes() Handles ReloadToolStripMenuItem.Click
@@ -24,7 +50,7 @@
         ListView1.Items.Clear()
         Dim CostumesCount As Integer = 0
 
-        For Each img In My.Computer.FileSystem.GetFiles(Debug_folder)
+        For Each img In My.Computer.FileSystem.GetFiles(costumeFolder)
             If FileIO.FileSystem.GetName(img).StartsWith("Costume") And FileIO.FileSystem.GetName(img).EndsWith(".jpg") Then
                 ImageList1.Images.Add(Drawing.Image.FromFile(img))
                 ListView1.Items.Add(FileIO.FileSystem.GetName(img).Replace(".jpg", ""), ImageList1.Images.Count - 1)
@@ -34,6 +60,7 @@
                 Status_CosCount.Text = "Costumes: " & CostumesCount.ToString
             End If
         Next
+        If CostumesCount = 0 Then Status_CosCount.Text = "Coulden't find any costumes. "
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
@@ -84,4 +111,5 @@
     Private Sub ShowLogToolStrip(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShowLogToolStripMenuItem.CheckedChanged
         Startup.Visible = ShowLogToolStripMenuItem.Checked
     End Sub
+
 End Class

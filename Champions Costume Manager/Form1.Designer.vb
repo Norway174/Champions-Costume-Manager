@@ -39,6 +39,10 @@ Partial Class Form1
         Me.ConfirmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripComboBox2 = New System.Windows.Forms.ToolStripComboBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -75,7 +79,7 @@ Partial Class Form1
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripDropDownButton2, Me.ToolStripSeparator1, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripDropDownButton2, Me.ToolStripSeparator1, Me.ToolStripButton1, Me.ToolStripSeparator2, Me.ToolStripSeparator3, Me.ToolStripButton2, Me.ToolStripComboBox2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(958, 25)
@@ -95,14 +99,14 @@ Partial Class Form1
         'ReloadToolStripMenuItem
         '
         Me.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem"
-        Me.ReloadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReloadToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.ReloadToolStripMenuItem.Text = "Reload"
         '
         'ShowLogToolStripMenuItem
         '
         Me.ShowLogToolStripMenuItem.CheckOnClick = True
         Me.ShowLogToolStripMenuItem.Name = "ShowLogToolStripMenuItem"
-        Me.ShowLogToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ShowLogToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.ShowLogToolStripMenuItem.Text = "Show Log"
         '
         'ToolStripDropDownButton2
@@ -161,6 +165,39 @@ Partial Class Form1
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(56, 22)
         Me.ToolStripButton1.Text = "Import..."
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripSeparator3.ForeColor = System.Drawing.SystemColors.Control
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(31, 22)
+        Me.ToolStripButton2.Text = "Edit"
+        '
+        'ToolStripComboBox2
+        '
+        Me.ToolStripComboBox2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripComboBox2.AutoToolTip = True
+        Me.ToolStripComboBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.ToolStripComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ToolStripComboBox2.DropDownWidth = 550
+        Me.ToolStripComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Standard
+        Me.ToolStripComboBox2.Name = "ToolStripComboBox2"
+        Me.ToolStripComboBox2.Size = New System.Drawing.Size(200, 25)
         '
         'ListView1
         '
@@ -236,6 +273,7 @@ Partial Class Form1
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(327, 512)
         Me.Name = "Form1"
         Me.Text = "[CCM] Champions Costume Manager"
@@ -272,5 +310,9 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ShowLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripComboBox2 As System.Windows.Forms.ToolStripComboBox
+    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
 
 End Class
