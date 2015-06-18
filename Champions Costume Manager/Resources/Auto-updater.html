@@ -1,0 +1,70 @@
+<head>
+  
+  <style>
+* {
+  box-sizing: border-box;
+}
+.release-title {
+  margin: 0 60px 0 0;
+  font-size: 25px;
+}
+.release-authorship {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #767676;
+}
+.markdown-body {
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+  </style>
+  
+  <script>
+    var json = "HIGHLY BETA!\r\n\r\nUnless you download the whole project, and change the CO folder manually, and then recompile it into the EXE.\r\nThis won't work for you.\r\n\r\nUnless your CO folder is \"D:\\SteamLibrary\\SteamApps\\common\\Champions Online\\Champions Online\\Live\\screenshots\"\r\n\r\nThis will be fixed in next version.";
+
+    function myFunction(){
+    	var txt = replaceAll(json, "\r\n", "<br />");
+      document.getElementById("body").innerHTML = txt;
+    };
+    
+    function replaceAll(string, find, replace) {
+ 		return string.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+	}
+	function escapeRegExp(string) {
+	    return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+	}
+  </script>
+  
+</head>
+
+<body onload="myFunction()">
+  
+  <div ></div>
+  
+  <div class="release-body commit open">
+    <div class="release-header">
+        
+
+      <h1 class="release-title">
+        CCM BETA 0.0.0.1
+      </h1>
+      <p class="release-authorship">
+        <img alt="@Norway174" class="avatar" height="20" src="https://avatars.githubusercontent.com/u/4808657?v=3" width="20">
+        <a href="/Norway174">Norway174</a>
+        released this
+          <time datetime="2015-06-17T12:28:45Z" is="relative-time" title="Jun 17, 2015, 2:28 PM GMT+2">3 hours ago</time>
+
+      </p>
+    </div>
+
+      <div class="markdown-body" id="body">
+      
+      </div>
+
+  </div>
+  
+</body>

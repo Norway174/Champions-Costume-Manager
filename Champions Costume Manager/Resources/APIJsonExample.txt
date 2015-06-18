@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://api.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198",
+    "assets_url": "https://api.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198/assets",
+    "upload_url": "https://uploads.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198/assets{?name}",
+    "html_url": "https://github.com/Norway174/Champions-Costume-Manager/releases/tag/0.0.0.1",
+    "id": 1427198,
+    "tag_name": "0.0.0.1",
+    "target_commitish": "master",
+    "name": "CCM BETA 0.0.0.1",
+    "draft": false,
+    "author": {
+      "login": "Norway174",
+      "id": 4808657,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4808657?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Norway174",
+      "html_url": "https://github.com/Norway174",
+      "followers_url": "https://api.github.com/users/Norway174/followers",
+      "following_url": "https://api.github.com/users/Norway174/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Norway174/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Norway174/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Norway174/subscriptions",
+      "organizations_url": "https://api.github.com/users/Norway174/orgs",
+      "repos_url": "https://api.github.com/users/Norway174/repos",
+      "events_url": "https://api.github.com/users/Norway174/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Norway174/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "prerelease": true,
+    "created_at": "2015-06-17T12:28:45Z",
+    "published_at": "2015-06-17T12:33:04Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/Norway174/Champions-Costume-Manager/releases/assets/649964",
+        "id": 649964,
+        "name": "Champions.Costume.Manager.exe",
+        "label": null,
+        "uploader": {
+          "login": "Norway174",
+          "id": 4808657,
+          "avatar_url": "https://avatars.githubusercontent.com/u/4808657?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Norway174",
+          "html_url": "https://github.com/Norway174",
+          "followers_url": "https://api.github.com/users/Norway174/followers",
+          "following_url": "https://api.github.com/users/Norway174/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Norway174/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Norway174/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Norway174/subscriptions",
+          "organizations_url": "https://api.github.com/users/Norway174/orgs",
+          "repos_url": "https://api.github.com/users/Norway174/repos",
+          "events_url": "https://api.github.com/users/Norway174/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Norway174/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "content_type": "application/x-msdownload",
+        "state": "uploaded",
+        "size": 69120,
+        "download_count": 1,
+        "created_at": "2015-06-17T12:34:38Z",
+        "updated_at": "2015-06-17T12:34:39Z",
+        "browser_download_url": "https://github.com/Norway174/Champions-Costume-Manager/releases/download/0.0.0.1/Champions.Costume.Manager.exe"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/Norway174/Champions-Costume-Manager/tarball/0.0.0.1",
+    "zipball_url": "https://api.github.com/repos/Norway174/Champions-Costume-Manager/zipball/0.0.0.1",
+    "body": "HIGHLY BETA!\r\n\r\nUnless you download the whole project, and change the CO folder manually, and then recompile it into the EXE.\r\nThis won't work for you.\r\n\r\nUnless your CO folder is \"D:\\SteamLibrary\\SteamApps\\common\\Champions Online\\Champions Online\\Live\\screenshots\"\r\n\r\nThis will be fixed in next version."
+  }
+]

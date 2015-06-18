@@ -48,10 +48,14 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -72,6 +76,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoUpdater.Designer.vb">
+      <DependentUpon>AutoUpdater.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AutoUpdater.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODetector.Designer.vb">
+      <DependentUpon>CODetector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CODetector.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Export.Designer.vb">
       <DependentUpon>Export.vb</DependentUpon>
     </Compile>
@@ -120,6 +136,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AutoUpdater.resx">
+      <DependentUpon>AutoUpdater.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CODetector.resx">
+      <DependentUpon>CODetector.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Export.resx">
       <DependentUpon>Export.vb</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +165,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -152,6 +175,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Auto-updater.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\APIJsonExample.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

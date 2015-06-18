@@ -11,6 +11,7 @@
 Option Strict On
 Option Explicit On
 
+Imports System
 
 Namespace My.Resources
     
@@ -21,20 +22,20 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"), _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(), _
-     Global.Microsoft.VisualBasic.HideModuleNameAttribute()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
+     Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
     Friend Module Resources
-
+        
         Private resourceMan As Global.System.Resources.ResourceManager
-
+        
         Private resourceCulture As Global.System.Globalization.CultureInfo
-
+        
         '''<summary>
         '''  Returns the cached ResourceManager instance used by this class.
         '''</summary>
-        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
         Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
@@ -44,19 +45,71 @@ Namespace My.Resources
                 Return resourceMan
             End Get
         End Property
-
+        
         '''<summary>
         '''  Overrides the current thread's CurrentUICulture property for all
         '''  resource lookups using this strongly typed resource class.
         '''</summary>
-        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
         Friend Property Culture() As Global.System.Globalization.CultureInfo
             Get
                 Return resourceCulture
             End Get
-            Set(ByVal value As Global.System.Globalization.CultureInfo)
+            Set
                 resourceCulture = value
             End Set
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to [
+        '''  {
+        '''    &quot;url&quot;: &quot;https://api.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198&quot;,
+        '''    &quot;assets_url&quot;: &quot;https://api.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198/assets&quot;,
+        '''    &quot;upload_url&quot;: &quot;https://uploads.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198/assets{?name}&quot;,
+        '''    &quot;html_url&quot;: &quot;https://github.com/Norway174/Champions-Costume-Manager/releases/tag/0.0.0.1&quot;,
+        '''    &quot;id&quot;: 1427198,
+        '''    &quot;tag_name&quot;: &quot;0.0.0.1&quot;,
+        '''    &quot;target_commitish&quot;: &quot;maste [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property APIJsonExample() As String
+            Get
+                Return ResourceManager.GetString("APIJsonExample", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;head&gt;
+        '''  
+        '''  &lt;style&gt;
+        '''* {
+        '''  box-sizing: border-box;
+        '''}
+        '''.release-title {
+        '''  margin: 0 60px 0 0;
+        '''  font-size: 25px;
+        '''}
+        '''.release-authorship {
+        '''  margin-top: 5px;
+        '''  margin-bottom: 20px;
+        '''  font-size: 12px;
+        '''  color: #767676;
+        '''}
+        '''.markdown-body {
+        '''  overflow: hidden;
+        '''  font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Segoe UI&quot;, Arial, freesans, sans-serif;
+        '''  font-size: 14px;
+        '''  line-height: 1.6;
+        '''  word-wrap: break-word;
+        '''}
+        '''  &lt;/style&gt;
+        '''  
+        '''  &lt;script&gt;
+        '''    var json = &quot;HIGHLY BETA!\r\n\r\nUnless you download th [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property Auto_updater() As String
+            Get
+                Return ResourceManager.GetString("Auto_updater", resourceCulture)
+            End Get
         End Property
     End Module
 End Namespace

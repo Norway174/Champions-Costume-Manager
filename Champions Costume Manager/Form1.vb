@@ -1,12 +1,23 @@
 ﻿Public Class Form1
 
     Dim Debug_folder As String = "D:\SteamLibrary\SteamApps\common\Champions Online\Champions Online\Live\screenshots"
+    Public SettingsFolder As String = My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData.Replace("\" & My.Application.Info.Version.ToString, "")
+    Public SettingsFile As String = SettingsFolder & "\CCM-Settings.cfg"
 
     Function COFolder() As String
         Return Debug_folder
     End Function
 
-    Sub loadCostumes() Handles MyBase.Load, ReloadToolStripMenuItem.Click
+    Sub StartupProcedure() Handles MyBase.Load
+        Startup.Show()
+        Startup.Visible = ShowLogToolStripMenuItem.Checked
+
+        Console.WriteLine(SettingsFolder)
+
+        loadCostumes()
+    End Sub
+
+    Sub loadCostumes() Handles ReloadToolStripMenuItem.Click
         Status_SelCount.Text = ""
 
         ImageList1.Images.Clear()
@@ -68,5 +79,9 @@
 
     Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
         import.ShowDialog()
+    End Sub
+
+    Private Sub ShowLogToolStrip(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShowLogToolStripMenuItem.CheckedChanged
+        Startup.Visible = ShowLogToolStripMenuItem.Checked
     End Sub
 End Class

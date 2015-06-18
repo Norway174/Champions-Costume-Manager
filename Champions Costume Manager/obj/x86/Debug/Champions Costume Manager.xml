@@ -15,6 +15,48 @@ ChampionsCostumeManager
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Champions_Costume_Manager.My.Resources.Resources.APIJsonExample">
+	<summary>
+  Looks up a localized string similar to [
+  {
+    "url": "https://api.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198",
+    "assets_url": "https://api.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198/assets",
+    "upload_url": "https://uploads.github.com/repos/Norway174/Champions-Costume-Manager/releases/1427198/assets{?name}",
+    "html_url": "https://github.com/Norway174/Champions-Costume-Manager/releases/tag/0.0.0.1",
+    "id": 1427198,
+    "tag_name": "0.0.0.1",
+    "target_commitish": "maste [rest of string was truncated]";.
+</summary>
+</member><member name="P:Champions_Costume_Manager.My.Resources.Resources.Auto_updater">
+	<summary>
+  Looks up a localized string similar to &lt;head&gt;
+  
+  &lt;style&gt;
+* {
+  box-sizing: border-box;
+}
+.release-title {
+  margin: 0 60px 0 0;
+  font-size: 25px;
+}
+.release-authorship {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #767676;
+}
+.markdown-body {
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+  &lt;/style&gt;
+  
+  &lt;script&gt;
+    var json = "HIGHLY BETA!\r\n\r\nUnless you download th [rest of string was truncated]";.
+</summary>
 </member><member name="T:Champions_Costume_Manager.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
