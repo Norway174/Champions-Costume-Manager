@@ -15,6 +15,8 @@ Keep in mind, it's highly BETA right now. And if it breaks, feel free to submit 
 
 ## What doesn't work / TODO list:
 
-- Renaming costumes. This also including renaming the handle, so you can actually use your friends costumes. (Needs testing.)
+- Renaming costumes.
 - Disable costumes without deleting them.
+- Switching between multiple copies of CO, and even non-CO folders for organizing.
+- Ability to transfer single or multiple costumes between diffrent instances/folders.
 - More??
