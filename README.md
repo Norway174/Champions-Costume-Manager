@@ -1,7 +1,7 @@
 # Champions-Costume-Manager
 A simple to use, yet powerfull Costume Manager for the MMORPG game, Champions Online. Also has the ability to share your costumes with your friends, using a Share Code, powered by PasteBin.
 
-![](http://i.gyazo.com/eb07a7dc3bea06b9787507fccdaa9f64.png)
+![](http://i.gyazo.com/38429c5435e7efda3ad854b8bb91a6a6.png)
 
 # STILL Work.In.Progress!
 Check the [Releases here](https://github.com/Norway174/Champions-Costume-Manager/releases) if you want to download CCM.
