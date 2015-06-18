@@ -11,28 +11,11 @@ Public Class CODetector
         'Dim result As List(Of DirectoryInfo)
         'result = programFiles.GetDirectories("*Champions Online", SearchOption.AllDirectories).ToList()
 
-        Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
-        Dim result As List(Of String) = Nothing
-
-        Dim d As DriveInfo
-        For Each d In allDrives
-            Console.WriteLine(d.Name)
-            Console.WriteLine(d.IsReady)
-
-            If d.IsReady Then
-                result = GetDirectories(d.Name)
-            End If
-        Next
+        Button2.Enabled = False
+        BackgroundWorker1.RunWorkerAsync()
+        
 
 
-        If result.Count <> 0 Then
-            For Each dir As String In result
-                If dir.EndsWith("Champions Online\Live\screenshots") Then
-                    CheckedListBox1.Items.Add(dir)
-                End If
-
-            Next
-        End If
 
 
 
@@ -43,6 +26,8 @@ Public Class CODetector
 
         For Each subfolder As String In IO.Directory.GetDirectories(path)
             subfolders.Add(subfolder)
+            'Label1.Text = subfolder
+            'Application.DoEvents()
 
             Try
                 subfolders.AddRange(GetDirectories(subfolder))
@@ -54,4 +39,42 @@ Public Class CODetector
         Return subfolders
     End Function
 
+    Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        CheckForIllegalCrossThreadCalls = False
+
+
+        Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
+        Dim result As List(Of String) = Nothing
+
+        Dim d As DriveInfo
+        For Each d In allDrives
+            Console.WriteLine(d.Name)
+            Console.WriteLine(d.IsReady)
+            Label1.Show()
+            Label1.Text = "Scanning Drive: " & d.Name
+
+            If d.IsReady Then
+
+                result = GetDirectories(d.Name)
+
+            End If
+        Next
+
+
+
+        'result = GetDirectories(result)
+
+        If result.Count <> 0 Then
+            For Each dir As String In result
+                If dir.EndsWith("Champions Online\Live\screenshots") Then
+                    CheckedListBox1.Items.Add(dir)
+                End If
+
+            Next
+        End If
+
+        Label1.Text = "All done!"
+        Button2.Enabled = True
+
+    End Sub
 End Class

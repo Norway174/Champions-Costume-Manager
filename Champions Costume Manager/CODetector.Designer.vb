@@ -28,6 +28,8 @@ Partial Class CODetector
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.DirectorySearcher1 = New System.DirectoryServices.DirectorySearcher()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'CheckedListBox1
@@ -82,11 +84,26 @@ Partial Class CODetector
         Me.DirectorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01")
         Me.DirectorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01")
         '
+        'BackgroundWorker1
+        '
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(251, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Scanning..."
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label1.Visible = False
+        '
         'CODetector
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(384, 210)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -95,6 +112,7 @@ Partial Class CODetector
         Me.Name = "CODetector"
         Me.Text = "CODetector"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents CheckedListBox1 As System.Windows.Forms.CheckedListBox
@@ -103,4 +121,6 @@ Partial Class CODetector
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents DirectorySearcher1 As System.DirectoryServices.DirectorySearcher
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
