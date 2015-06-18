@@ -12,7 +12,7 @@ Public Class CODetector
         'result = programFiles.GetDirectories("*Champions Online", SearchOption.AllDirectories).ToList()
 
         Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
-        Dim result As List(Of String)
+        Dim result As List(Of String) = Nothing
 
         Dim d As DriveInfo
         For Each d In allDrives
@@ -25,13 +25,15 @@ Public Class CODetector
         Next
 
 
+        If result.Count <> 0 Then
+            For Each dir As String In result
+                If dir.EndsWith("Champions Online\Live\screenshots") Then
+                    CheckedListBox1.Items.Add(dir)
+                End If
 
-        For Each dir As String In result
-            If dir.EndsWith("Champions Online\Live\screenshots") Then
-                CheckedListBox1.Items.Add(dir)
-            End If
+            Next
+        End If
 
-        Next
 
 
     End Sub
@@ -44,7 +46,7 @@ Public Class CODetector
 
             Try
                 subfolders.AddRange(GetDirectories(subfolder))
-            Catch ex As UnauthorizedAccessException
+            Catch ex As Exception
                 'Ignore this folder and move on.
             End Try
         Next subfolder
