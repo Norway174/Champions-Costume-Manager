@@ -12,6 +12,7 @@ Public Class CODetector
         'result = programFiles.GetDirectories("*Champions Online", SearchOption.AllDirectories).ToList()
 
         Button2.Enabled = False
+        Label1.Show()
         BackgroundWorker1.RunWorkerAsync()
         
 
@@ -33,6 +34,7 @@ Public Class CODetector
                 subfolders.AddRange(GetDirectories(subfolder))
             Catch ex As Exception
                 'Ignore this folder and move on.
+                'Console.WriteLine(ex.Message)
             End Try
         Next subfolder
 
@@ -50,7 +52,7 @@ Public Class CODetector
         For Each d In allDrives
             Console.WriteLine(d.Name)
             Console.WriteLine(d.IsReady)
-            Label1.Show()
+
             Label1.Text = "Scanning Drive: " & d.Name
 
             If d.IsReady Then
