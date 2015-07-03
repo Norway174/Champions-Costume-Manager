@@ -121,12 +121,18 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <None Include="Form2.vb">
+      <SubType>Form</SubType>
+    </None>
     <Compile Include="Image2String2Image.Designer.vb">
       <DependentUpon>Image2String2Image.vb</DependentUpon>
     </Compile>
-    <Compile Include="Image2String2Image.vb">
+    <None Include="Image2String2Image.vb">
       <SubType>Form</SubType>
-    </Compile>
+    </None>
     <Compile Include="Import.Designer.vb">
       <DependentUpon>Import.vb</DependentUpon>
     </Compile>
@@ -147,6 +153,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Rename.Designer.vb">
+      <DependentUpon>Rename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rename.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Startup.Designer.vb">
       <DependentUpon>Startup.vb</DependentUpon>
@@ -179,6 +191,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rename.resx">
+      <DependentUpon>Rename.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Startup.resx">
       <DependentUpon>Startup.vb</DependentUpon>

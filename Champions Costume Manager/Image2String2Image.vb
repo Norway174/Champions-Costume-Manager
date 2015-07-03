@@ -3,6 +3,13 @@ Imports System.Drawing.Imaging
 
 Public Class Image2String2Image
 
+    '******************************************
+    '*                                        *
+    '*         THIS IS NOT A PART OF          *
+    '*             THE PROGRAM                *
+    '*                                        *
+    '******************************************
+
     Dim szResult As String = ""
     Dim img As Image = Nothing
     Public Function ConvertImageToString(ByVal value As Image) As String

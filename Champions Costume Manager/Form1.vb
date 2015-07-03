@@ -60,7 +60,7 @@
         End If
 
         For Each img In My.Computer.FileSystem.GetFiles(costumeFolder)
-            If FileIO.FileSystem.GetName(img).StartsWith("Costume") And FileIO.FileSystem.GetName(img).EndsWith(".jpg") Then
+            If FileIO.FileSystem.GetName(img).StartsWith("Costume_") And FileIO.FileSystem.GetName(img).EndsWith(".jpg") Then
                 ImageList1.Images.Add(Drawing.Image.FromFile(img))
                 ListView1.Items.Add(FileIO.FileSystem.GetName(img).Replace(".jpg", ""), ImageList1.Images.Count - 1)
                 ListView1.Items.Item(ImageList1.Images.Count - 1).Tag = img
@@ -117,6 +117,17 @@
         loadCostumes()
     End Sub
 
+    Public Function ConvertDate(ByVal timestamp As Double) As String
+        Dim dateTime As DateTime = New System.DateTime(1970, 1, 1, 0, 0, 0, _
+         0)
+        dateTime = dateTime.AddSeconds(timestamp)
+        dateTime = dateTime.AddSeconds(946684800)
+        ' Cryptic Epoch of Jan 1, 2000
+        Dim TextDate As String = dateTime.ToString("yyyy-MM-dd hh:mm:ss")
+        Return TextDate
+
+    End Function
+
     Private Sub UpladToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpladToolStripMenuItem.Click
         Export.ShowDialog()
     End Sub
@@ -129,4 +140,7 @@
         Startup.Visible = ShowLogToolStripMenuItem.Checked
     End Sub
 
+    Private Sub RenameButton() Handles RenameToolStripMenuItem.Click
+        Rename.ShowDialog()
+    End Sub
 End Class

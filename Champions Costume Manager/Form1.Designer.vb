@@ -49,6 +49,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.RenameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -121,29 +122,29 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectedToolStripMenuItem, Me.UpladToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectedToolStripMenuItem, Me.RenameToolStripMenuItem, Me.UpladToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.OwnerItem = Me.ToolStripDropDownButton2
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(122, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 114)
         '
         'SelectedToolStripMenuItem
         '
         Me.SelectedToolStripMenuItem.Enabled = False
         Me.SelectedToolStripMenuItem.Name = "SelectedToolStripMenuItem"
-        Me.SelectedToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.SelectedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SelectedToolStripMenuItem.Text = "Selected:"
         '
         'UpladToolStripMenuItem
         '
         Me.UpladToolStripMenuItem.Name = "UpladToolStripMenuItem"
-        Me.UpladToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.UpladToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UpladToolStripMenuItem.Text = "Share..."
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfirmToolStripMenuItem})
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ConfirmToolStripMenuItem
@@ -248,10 +249,13 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 425)
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(6, 419)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(300, 20)
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(300, 13)
         Me.TextBox1.TabIndex = 1
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PictureBox1
         '
@@ -263,6 +267,12 @@ Partial Class Form1
         Me.PictureBox1.Size = New System.Drawing.Size(300, 400)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'RenameToolStripMenuItem
+        '
+        Me.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem"
+        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RenameToolStripMenuItem.Text = "Rename"
         '
         'Form1
         '
@@ -314,5 +324,6 @@ Partial Class Form1
     Friend WithEvents ToolStripComboBox2 As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents RenameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
