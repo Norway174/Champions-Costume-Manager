@@ -4,6 +4,7 @@ A simple to use, yet powerfull Costume Manager for the MMORPG game, Champions On
 ![](http://i.gyazo.com/38429c5435e7efda3ad854b8bb91a6a6.png)
 
 # STILL Work.In.Progress!
+## Download:
 Check the [Releases here](https://github.com/Norway174/Champions-Costume-Manager/releases) if you want to download CCM.
 Keep in mind, it's highly BETA right now. And if it breaks, feel free to submit a [ticket](https://github.com/Norway174/Champions-Costume-Manager/issues) in the issues page.
 
