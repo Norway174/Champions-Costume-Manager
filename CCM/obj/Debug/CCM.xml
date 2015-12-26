@@ -11,12 +11,13 @@ CCM
  TODO:
  - Uninstall button / remove settings file (DONE!)
  - Import page, + functionality (DONE!)
- - Export page, + functionality, as well as save the info to a JSON file for storage (Almost done! Still needs to save the info to a JSON)
- - Move costumes between folders
+ - Export page, + functionality (DONE!)
+ - Move costumes between folders (DONE!)
  - Simple delete options of one or multiple (DONE!)
  
  TODO v2:
  - Auto-update via GitHub. Need atleast one release, and more data to map JSON
+ - Save Export Info to JSON, associate with the correct costume
  
  ADVANCED TODO:
  - Display proper tailor costume names

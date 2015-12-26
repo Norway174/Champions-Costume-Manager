@@ -1,0 +1,13 @@
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Release\CCM.exe.config
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Release\CCM.exe
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Release\CCM.pdb
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Release\CCM.xml
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Release\Newtonsoft.Json.dll
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Release\Newtonsoft.Json.xml
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Release\CCM.Export.resources
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Release\CCM.Form1.resources
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Release\CCM.Resources.resources
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Release\CCM.vbproj.GenerateResource.Cache
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Release\CCM.exe
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Release\CCM.xml
+D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Release\CCM.pdb
