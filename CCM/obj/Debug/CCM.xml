@@ -6,25 +6,6 @@ CCM
 </name>
 </assembly>
 <members>
-<member name="T:CCM.Form1">
- <summary>
- TODO:
- - Uninstall button / remove settings file (DONE!)
- - Import page, + functionality (DONE!)
- - Export page, + functionality (DONE!)
- - Move costumes between folders (DONE!)
- - Simple delete options of one or multiple (DONE!)
- 
- TODO v2:
- - Auto-update via GitHub. Need atleast one release, and more data to map JSON
- - Save Export Info to JSON, associate with the correct costume
- 
- ADVANCED TODO:
- - Display proper tailor costume names
- - Rename costumes
- </summary>
- 
-</member>
 <member name="T:CCM.My.Resources.Resources">
 <summary>
   A strongly-typed resource class, for looking up localized strings, etc.
@@ -45,6 +26,25 @@ CCM
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member>
+<member name="T:CCM.EmbeddedAssembly">
+ <summary>
+ A class for loading Embedded Assembly
+ </summary>
+</member>
+<member name="M:CCM.EmbeddedAssembly.Load(System.String,System.String)">
+ <summary>
+ Load Assembly, DLL from Embedded Resources into memory.
+ </summary>
+ <param name="embeddedResource">Embedded Resource string. Example: WindowsFormsApplication1.SomeTools.dll</param>
+ <param name="fileName">File Name. Example: SomeTools.dll</param>
+</member>
+<member name="M:CCM.EmbeddedAssembly.Get(System.String)">
+ <summary>
+ Retrieve specific loaded DLL/assembly from memory
+ </summary>
+ <param name="assemblyFullName"></param>
+ <returns></returns>
 </member>
 </members>
 </doc>

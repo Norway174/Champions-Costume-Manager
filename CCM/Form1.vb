@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Net
+Imports System.Reflection
 Imports Microsoft.Win32
 Imports Newtonsoft.Json
 
@@ -23,6 +24,11 @@ Imports Newtonsoft.Json
 ''' </summary>
 ''' 
 
+' To embed a dll in a compiled exe:
+' 1 - Change the properties of the dll in References so that Copy Local=false
+' 2 - Add the dll file to the project as an additional file not just a reference
+' 3 - Change the properties of the file so that Build Action=Embedded Resource
+' 4 - Paste this code before Application.Run in the main exe
 
 
 Public Class Form1
@@ -39,9 +45,12 @@ Public Class Form1
     'Dim int As Integer = 0
 
 
+
+
 #Region "Misc subs"
 
     Private Sub startUp() Handles MyBase.Load
+
         'PART ONE: Check Settings
         CheckSettings()
 

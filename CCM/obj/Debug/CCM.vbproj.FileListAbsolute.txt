@@ -3,7 +3,6 @@ D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Debug\CCM.exe
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Debug\CCM.pdb
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Debug\CCM.xml
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Debug\Newtonsoft.Json.dll
-D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\bin\Debug\Newtonsoft.Json.xml
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Debug\CCM.Form1.resources
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Debug\CCM.Resources.resources
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Debug\CCM.vbproj.GenerateResource.Cache
