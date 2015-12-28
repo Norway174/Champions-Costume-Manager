@@ -1,7 +1,7 @@
 # Champions-Costume-Manager
 A simple to use, yet powerfull Costume Manager for the MMORPG game, Champions Online. Also has the ability to share your costumes with your friends, using a Share Code, powered by [Paste.ee](https://paste.ee/).
 
-![](http://i.imgur.com/cflON6Y.png)
+![](http://i.imgur.com/IkjJqca.png)
 
 # STILL Work.In.Progress!
 ## ALPHA:
