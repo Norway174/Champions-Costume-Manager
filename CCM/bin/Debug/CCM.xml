@@ -32,13 +32,6 @@ CCM
  A class for loading Embedded Assembly
  </summary>
 </member>
-<member name="M:CCM.EmbeddedAssembly.Load(System.String,System.String)">
- <summary>
- Load Assembly, DLL from Embedded Resources into memory.
- </summary>
- <param name="embeddedResource">Embedded Resource string. Example: WindowsFormsApplication1.SomeTools.dll</param>
- <param name="fileName">File Name. Example: SomeTools.dll</param>
-</member>
 <member name="M:CCM.EmbeddedAssembly.Get(System.String)">
  <summary>
  Retrieve specific loaded DLL/assembly from memory

@@ -7,7 +7,10 @@ Imports Newtonsoft.Json
 
 
 ''' <summary>
-''' TODO:
+''' NEW 0.1.0.1 :
+''' - Save settings automatically on the first time run.
+''' 
+''' FEATURES:
 ''' - Uninstall button / remove settings file (DONE!)
 ''' - Import page, + functionality (DONE!)
 ''' - Export page, + functionality (DONE!)
@@ -40,6 +43,7 @@ Public Class Form1
     Dim FirstRun As Boolean = False
     Private Searching As Boolean = False
 
+    'Normally this variable would be empety. The string is only added for internal testing. Please ignore.
     Dim COFolder As String = "D:\SteamLibrary\SteamApps\common\Champions Online\Champions Online\Live\screenshots"
 
     'Dim int As Integer = 0
@@ -469,6 +473,8 @@ Public Class Form1
             If GetCOFolderFromRegistry() <> "" Then
                 InstallFolder_ListBox.Items.Add(GetCOFolderFromRegistry)
                 InstallFolder_AddReg.Enabled = False
+
+                SaveCoFolderSettings()
             End If
         Else
             Dim output As String = ""
