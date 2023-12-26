@@ -86,6 +86,12 @@ Public Class Export
         Public Costume_Data As String
     End Class
 
+    Public Class JSON_CostumePaste
+        Public name As String
+        Public syntax As String
+        Public contents As String
+    End Class
+
     Private Sub CopyCodeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopyCodeToolStripMenuItem.Click
         My.Computer.Clipboard.SetText(TextBox1.Text)
     End Sub
@@ -102,7 +108,7 @@ Public Class Export
 
     'Private Const post_url As String = "http://hastebin.com/documents"
 
-    Private Const post_url As String = "http://paste.ee/api"
+    Private Const post_url As String = "https://api.paste.ee/v1/pastes?key=u9vhiWE1t2niVYfQbkzVWI3cS81ktPDh3QZxaBF1V"
 
     Public Function Post(ByVal paste_code As String,
                          ByVal paste_name As String) As String
@@ -123,16 +129,25 @@ Public Class Export
         'Dim Data As String = paste_code
 
         'PASTE.EE
-        Data.Add("key", "526ca40c65ee650265008e61ab8ccd11")
-        Data.Add("description", paste_name)
-        Data.Add("paste", paste_code)
+        Dim CostumeData As New JSON_CostumePaste()
+
+        CostumeData.name = paste_name
+        CostumeData.syntax = "json"
+        CostumeData.contents = paste_code
+
+
+
+        Dim CostumeDataPaste As String = "{""description"":""" + paste_name + """,""sections"":[" + JsonConvert.SerializeObject(CostumeData, formatting:=1) + "]}"
+
+        Data.Add("key", "u9vhiWE1t2niVYfQbkzVWI3cS81ktPDh3QZxaBF1V")
+        Data.Add("sections", CostumeDataPaste)
         Data.Add("format", "json")
         Data.Add("expire", SelectedExpire)
 
         Dim PasteURL As String = "False"
 
         Using Client As New WebClient()
-            Dim Response As String = Encoding.UTF8.GetString(Client.UploadValues(post_url, Data))
+            Dim Response As String = Client.UploadString(post_url, "POST", CostumeDataPaste)
 
             PasteURL = Response
 
@@ -173,5 +188,9 @@ Public Class Export
             Label2.Visible = False
             NumericUpDown1.Visible = False
         End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
     End Sub
 End Class

@@ -11,3 +11,17 @@ D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Debug\CCM.xml
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Debug\CCM.pdb
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Debug\CCM.vbprojResolveAssemblyReference.cache
 D:\Visual Studio 2015\Projects\Champions Costume Manager\CCM\obj\Debug\CCM.Export.resources
+D:\GitHub\Champions-Costume-Manager\CCM\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\Champions-Costume-Manager\CCM\bin\Debug\CCM.exe.config
+D:\GitHub\Champions-Costume-Manager\CCM\bin\Debug\CCM.exe
+D:\GitHub\Champions-Costume-Manager\CCM\bin\Debug\CCM.pdb
+D:\GitHub\Champions-Costume-Manager\CCM\bin\Debug\CCM.xml
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.vbproj.AssemblyReference.cache
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.Export.resources
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.Form1.resources
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.Resources.resources
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.vbproj.GenerateResource.cache
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.vbproj.CoreCompileInputs.cache
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.exe
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.xml
+D:\GitHub\Champions-Costume-Manager\CCM\obj\Debug\CCM.pdb
